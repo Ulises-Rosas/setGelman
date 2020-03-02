@@ -14,7 +14,7 @@ htop: pyenv
 	tar -xf $(htopversion)$(compress)
 	pushd $(htopversion); ./configure && make; popd
 	rm $(htopversion)$(compress)
-	install $(htopversion)'/htop' $(pyname)'/bin'
+	install $(htopversion)/htop $(pyname)/bin
 
 message:
 	echo "\nActivate with:\n" && echo 'source '$(pyname)'/bin/activate'
