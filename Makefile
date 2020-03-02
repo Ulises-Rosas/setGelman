@@ -10,7 +10,7 @@ pyenv:
 	python3 -m venv $(pyname)
 
 htop: pyenv
-	curl -o $(htopversion)$(compress) 'https://hisham.hm/htop/releases/2.2.0/'$(htopversion)$(compress)
+	curl -s -o $(htopversion)$(compress) 'https://hisham.hm/htop/releases/2.2.0/'$(htopversion)$(compress)
 	tar -xf $(htopversion)$(compress)
 	pushd $(htopversion); ./configure && make; popd
 	rm $(htopversion)$(compress)
