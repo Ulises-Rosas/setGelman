@@ -24,6 +24,7 @@ miniconda:
 	bash $(minicondaf) -b -p $(minicondap)
 	install $(minicondap)/bin/conda    $(pyname)/bin
 	install $(minicondap)/bin/conda-env $(pyname)/bin
+	install $(minicondap)/bin/activate $(pyname)/bin
 
 message:
 	echo "\nActivate with:\n" && echo 'source '$(pyname)'/bin/activate'
